@@ -1,0 +1,21 @@
+{
+  "name": "express-restify-mongoose-queryizer",
+  "version": "1.0.0",
+  "description": "Middleware for express-restify-mongoose which allows direct querying via GET without JSON structures",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hash-bang/express-restify-mongoose-queryizer.git"
+  },
+  "keywords": [
+    "express-restify-mongoose",
+    "restify",
+    "query"
+  ],
+  "author": "Matt Carter <m@ttcarter.com> (https://github.com/hash-bang)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hash-bang/express-restify-mongoose-queryizer/issues"
+  },
+  "homepage": "https://github.com/hash-bang/express-restify-mongoose-queryizer#readme"
+}
