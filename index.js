@@ -13,4 +13,4 @@ module.exports = function(req, res, next) {
 	req.query.query = JSON.stringify(newQuery);
 
 	next();
-});
+};
