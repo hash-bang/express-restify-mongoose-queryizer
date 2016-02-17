@@ -6,7 +6,6 @@ module.exports = function(req, res, next) {
 		if (key == 'query') return; // Ignore the existing query structure
 		if (key == 'distinct' || key == 'limit' || key == 'populate' || key == 'select' || key == 'skip' || key== 'sort') return; // Ignore meta fields
 		newQuery[key] = req.query[key];
-		delete req.query[key];
 	});
 
 	// Encode back into req.query.query
