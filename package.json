@@ -1,6 +1,6 @@
 {
   "name": "express-restify-mongoose-queryizer",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Middleware for express-restify-mongoose which allows direct querying via GET without JSON structures",
   "main": "index.js",
   "repository": {

@@ -4,12 +4,19 @@ module.exports = function(settings) {
 	_.defaults(settings, {
 		rewriteQuery: true,
 		rewriteQueryDeleteKeys: false,
+		rewriteGetOnly: true,
 		postToPatch: true,
 		postToPatchUrl: /^\/api\/.+\/[0-9a-f]{24}$/,
 	});
 
 	return function(req, res, next) {
-		if (settings.rewriteQuery) {
+		if (
+			settings.rewriteQuery &&
+			(
+				!settings.rewriteGetOnly ||
+				req.method == 'GET'
+			)
+		) {
 			// Import existing query structure if its present
 			var newQuery = req.query.query ? JSON.parse(req.query.query) : {};
 

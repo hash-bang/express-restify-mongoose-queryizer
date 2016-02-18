@@ -29,6 +29,9 @@ Then somewhere in your express application install it as middleware:
 		// If we do rewrite should we also remove the key from req.query (not recommended if you have other middleware that relies on req.query)
 		rewriteQueryDeleteKeys: false,
 
+		// Only rewrite query strings during GET operation
+		rewriteGetOnly: true,
+
 		// Rewrite 'POST' operations to 'PATCH'
 		postToPatch: true,
 
