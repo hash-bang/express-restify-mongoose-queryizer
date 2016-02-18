@@ -31,7 +31,6 @@ module.exports = function(settings) {
 			( !settings.postToPatchUrl || settings.postToPatchUrl.test(req.originalUrl) )
 		) {
 			req.method = 'PATCH';
-			console.log('BODY', req.body);
 		}
 
 		next();
