@@ -21,4 +21,17 @@ Install via NPM:
 
 Then somewhere in your express application install it as middleware:
 
-	app.use(require('express-restify-mongoose-queryizer'));
+	app.use(require('express-restify-mongoose-queryizer')({
+
+		// Whether to rewrite queries (see above examples)
+		rewriteQuery: true,
+
+		// If we do rewrite should we also remove the key from req.query (not recommended if you have other middleware that relies on req.query)
+		rewriteQueryDeleteKeys: false,
+
+		// Rewrite 'POST' operations to 'PATCH'
+		postToPatch: true,
+
+		// ... but only if they match this URL format
+		postToPatchUrl: /^\/api\/.+\/.+$/,
+	}));
