@@ -32,6 +32,12 @@ Then somewhere in your express application install it as middleware:
 		// Only rewrite query strings during GET operation
 		rewriteGetOnly: true,
 
+		// Allow JSON objects as values
+		rewriteParseJSON: true,
+
+		// Also use the HSON parser (allows non-quoted strings) instead of the plain JSON.parse()
+		rewriteParseHSON: true,
+
 		// Rewrite 'POST' operations to 'PATCH'
 		postToPatch: true,
 
