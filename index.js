@@ -5,7 +5,7 @@ module.exports = function(settings) {
 		rewriteQuery: true,
 		rewriteQueryDeleteKeys: false,
 		postToPatch: true,
-		postToPatchUrl: /^\/api\/.+\/.+$/,
+		postToPatchUrl: /^\/api\/.+\/[0-9a-f]{24}$/,
 	});
 
 	return function(req, res, next) {

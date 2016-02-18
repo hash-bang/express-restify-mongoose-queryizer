@@ -32,6 +32,6 @@ Then somewhere in your express application install it as middleware:
 		// Rewrite 'POST' operations to 'PATCH'
 		postToPatch: true,
 
-		// ... but only if they match this URL format
-		postToPatchUrl: /^\/api\/.+\/.+$/,
+		// ... but only if they match this URL format - e.g. /api/widgets/56c528046ce4b00f517eb55c
+		postToPatchUrl: /^\/api\/.+\/[0-9a-f]{24}$/,
 	}));
