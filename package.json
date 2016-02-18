@@ -1,6 +1,6 @@
 {
   "name": "express-restify-mongoose-queryizer",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Middleware for express-restify-mongoose which allows direct querying via GET without JSON structures",
   "main": "index.js",
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/hash-bang/express-restify-mongoose-queryizer/issues"
   },
-  "homepage": "https://github.com/hash-bang/express-restify-mongoose-queryizer#readme"
+  "homepage": "https://github.com/hash-bang/express-restify-mongoose-queryizer#readme",
+  "dependencies": {
+    "hanson": "^1.1.1"
+  }
 }
